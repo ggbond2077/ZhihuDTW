@@ -182,7 +182,7 @@ def startAnswer():
         option = 1
         #题库查找题目
         #print(quiz)
-        localQuiz = quizSet.find_one('quiz',quiz)
+        localQuiz = quizSet.find_one({'quiz':quiz})
         if localQuiz:
             successTime += 1
             for i in range(0,4):

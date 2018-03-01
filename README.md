@@ -4,7 +4,7 @@
 
 - 参考头脑王者项目 https://github.com/lyh2668/TNWZ
 
-- 博客 : [获取知乎答题王题库](https://www.ggbond.cc/知乎答题王/‎)
+- 博客 : [获取知乎答题王题库](https://www.ggbond.cc/知乎答题王/)
 
 *免责声明：仅供学习交流使用，请勿进行非法用途*
 
