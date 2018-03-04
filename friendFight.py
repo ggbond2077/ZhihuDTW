@@ -82,6 +82,8 @@ def leaveRoom(player):
         jdata = json.loads(resp.text)
         if jdata.get('errcode') == 0:
             print(player + ' 退出房间成功...')
+        else:
+            print(jdata)
     except:
         print(resp.text)
         print(player + ' 退出房间失败...')
@@ -98,6 +100,8 @@ def beginFight():
         jdata = json.loads(resp.text)
         if jdata.get('errcode') == 0:
             print('开始好友对战...')
+        else:
+            print(jdata)
     except:
         print(resp.text)
 
@@ -116,7 +120,7 @@ def findQuiz(quizNum):
             print('获取题目成功...')
             return jdata.get('data')
         else:
-            print('获取题目失败')
+            print(jdata)
     except:
         print(resp.text)
     
@@ -138,6 +142,8 @@ def choose(player,quizNum,option,cfTime,magic):
         if jdata.get('errcode') == 0:
             print(player + ' 选择成功...')
             return jdata.get('data')
+        else:
+            print(jdata)
     except:
         print(player + ' 选择失败...')
         print(resp.text)
@@ -156,6 +162,8 @@ def fightResult(player):
         if jdata.get('errcode') == 0:
             print(player + ' 获取结果成功...')
             return jdata.get('data')
+        else:
+            print(jdata)
     except:
         print(player + ' 获取结果失败...') 
         print(resp.text)
@@ -185,9 +193,9 @@ def startAnswer():
         localQuiz = quizSet.find_one({'quiz':quiz})
         if localQuiz:
             successTime += 1
-            for i in range(0,4):
-                if(optionList[i] == localQuiz['answer']):
-                    option = i+1
+            for j in range(0,4):
+                if(optionList[j] == localQuiz['answer']):
+                    option = j+1
                     break
 
         magic = genMagic(optionList.copy())
@@ -206,7 +214,7 @@ def startAnswer():
         #print(optionList[chooseResult['answer']-1]) 
 if __name__ == '__main__':
     #自行修改开房对战次数 i
-    i = 100
+    i = 5
     gameTime = 0
     while(i > 0):
         roomID = -1
@@ -219,7 +227,7 @@ if __name__ == '__main__':
         leaveRoom('player1')
         leaveRoom('player2')
         gameTime += 1
-        print('游戏次数 %d /命中题库次数 %d ' % (gameTime,successTime))
+        print('答题数 %d /命中题库次数 %d ' % (gameTime*5,successTime))
         time.sleep(1)
         i = i - 1
     conn.close()

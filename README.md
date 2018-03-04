@@ -1,6 +1,6 @@
 # ZhihuDTW
 
-- 知乎答题王自动开房答题 保存题目
+- 知乎答题王自动开房好友对战答题 保存题目到mongo数据库
 
 - 参考头脑王者项目 https://github.com/lyh2668/TNWZ
 
@@ -12,7 +12,7 @@
 
 ## 环境要求
 - python3
-- mongodb 
+- mongodb3
 
 ## 使用
 
@@ -28,12 +28,13 @@ cd ZhihuDTW
 pip3 install -r requirements.txt 
 ```
 ### 3 开房对战
-在friendFight.py 填入player1 player2的uid和token
-`python friendFight.py` 开始对战.
+在`friendFight.py` 填入两个对战玩家的uid和token
+
+运行： `python friendFight.py` 开始自动开放对战.
 
 ## More
-- 题目拿到了就下来就是如何排位赛了，可以全自动排位，可以修改返回数据，指示答案，也可以在电脑显示答案.
-- 过年火车票好难买...
+- 题目拿到了就下来就是如何排位赛了，可以全自动排位，可以修改返回数据，指示答案，也可以在电脑显示答案. (为了保持游戏性，最好是把题库打印出来背完 :)
 
-- 再次声明，进攻交流学习，勿做非法用途
+
+- 再次声明，仅供交流学习，勿做非法用途
  ![](https://www.ggbond.cc/wp-content/uploads/2018/03/notice.png)
