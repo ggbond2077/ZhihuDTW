@@ -67,8 +67,7 @@ def intoRoom(player):
     except:
         print(resp.text)
         print(player + ' 进入房间失败...')
-        leaveRoom('player1')
-        leaveRoom('player2')
+        leaveRoom(player)
 
 def leaveRoom(player):
     params = {
