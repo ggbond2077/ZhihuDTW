@@ -32,12 +32,13 @@ pip install -i http://pypi.douban.com/simple -- trusted-host pypi.douban.com -r 
 
 ### 二 好友开房对战抓题
 
-####准备
+#### 准备
 
 1. 终端运行`rankingFight`:  `mitmdump --flow-detail 0  -s ./rankingFight.py` 启动代理
 2. 手机与电脑处于同一wifi网络,设置wifi代理为 电脑ip 端口为8080
-2. 登录账号1，可看到输出: token和uid 填入到friendFight.py player1处
-3. 同理登录账号2 填入player2的token和uid
+3. 访问`mitmproxy.it` 安装证书
+4. 登录答题王账号1，可看到输出: token和uid 填入到friendFight.py player1处(失败多试一次)
+5. 同理登录账号2 填入player2的token和uid
 
 #### 开始对战
 - 可更改代码中开房次数 i 
