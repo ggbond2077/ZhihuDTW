@@ -6,4 +6,4 @@ pymongo == 3.6.0
 
 # friendFight.py: 1
 requests == 2.18.4
-mitmproxy == 3.0.3
+mitmproxy == 4.0.4
